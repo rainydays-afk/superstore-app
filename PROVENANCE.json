@@ -1,0 +1,85 @@
+{
+  "source_relative_path": "superstore_orders.csv",
+  "source_sha256": "1b5da674659c757f741f35c85e8c42df00cbc95c527ba7dba8b094a2755be92c",
+  "bundled_relative_path": "data/superstore_orders.csv",
+  "bundled_sha256": "1b5da674659c757f741f35c85e8c42df00cbc95c527ba7dba8b094a2755be92c",
+  "source_bytes": 4721145,
+  "copied_without_modification": true,
+  "verified_on": "2026-11-16",
+  "rows": 51290,
+  "columns": [
+    "Row ID",
+    "Order Date",
+    "State",
+    "Country",
+    "Region",
+    "Category",
+    "Sub-Category",
+    "Sales",
+    "Profit"
+  ],
+  "unit_of_observation": "One order/product line. Row ID uniquely identifies an order-line record; this is not one row per order.",
+  "row_id": {
+    "column": "Row ID",
+    "nonmissing": true,
+    "unique": true
+  },
+  "date_column": "Order Date",
+  "date_min": "2011-01-01",
+  "date_max": "2014-12-31",
+  "years": [
+    2011,
+    2012,
+    2013,
+    2014
+  ],
+  "year_record_counts": {
+    "2011": 8998,
+    "2012": 10962,
+    "2013": 13799,
+    "2014": 17531
+  },
+  "missing_counts": {
+    "Row ID": 0,
+    "Order Date": 0,
+    "State": 0,
+    "Country": 0,
+    "Region": 0,
+    "Category": 0,
+    "Sub-Category": 0,
+    "Sales": 0,
+    "Profit": 0
+  },
+  "full_duplicate_rows": 0,
+  "transformations": "None. No columns or rows were filtered, renamed, merged, or changed when copying this existing course CSV.",
+  "orders_count_available": false,
+  "orders_count_note": "Order ID is absent from this 9-column course CSV. len(df) counts order lines, not orders; do not label this count as Orders.",
+  "metrics": {
+    "Sales": "Sum Sales across selected order lines.",
+    "Profit": "Sum Profit across selected order lines. Negative values represent losses and are retained.",
+    "Profit Margin": "sum(Profit) / sum(Sales), if sum(Sales) != 0; not the average of line-level ratios.",
+    "Order lines": "Number of selected rows."
+  },
+  "regions": [
+    "Africa",
+    "Canada",
+    "Caribbean",
+    "Central",
+    "Central Asia",
+    "EMEA",
+    "East",
+    "North",
+    "North Asia",
+    "Oceania",
+    "South",
+    "Southeast Asia",
+    "West"
+  ],
+  "categories": [
+    "Furniture",
+    "Office Supplies",
+    "Technology"
+  ],
+  "geography_note": "This is Global Superstore, not US-only Superstore. Region includes 13 global labels; Country is available.",
+  "source_context": "Existing local course extract. The orders sheets in superstore.xlsx and 2026_Fall/Data/superstore.xlsx have the same 51,290 Row IDs and date values; selected numeric differences from CSV are only floating-point roundoff (<5e-13). No Excel join is required."
+}
